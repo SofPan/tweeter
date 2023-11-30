@@ -5,7 +5,6 @@ nav{
   background-color: #4056A1;
   color: #fff;
   padding: 0 1.5em;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
