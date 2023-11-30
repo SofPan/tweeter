@@ -9,10 +9,6 @@ nav{
   align-items: center;
 }
 
-.logo{
-  font-family: "Bungee", sans-serif;
-}
-
 .nav-text .icon{
   color: red;
   display: block;
