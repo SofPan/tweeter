@@ -44,6 +44,9 @@ h1, h2, h3, h4 {
   padding: 5px 10px;
 }
 
+.red-text{
+  color: red;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
