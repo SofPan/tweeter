@@ -29,6 +29,22 @@ h1, h2, h3, h4 {
   font-family: "Bungee", sans-serif;
 }
 
+.text-alert{
+  color: red;
+}
+
+.text-light{
+  color: #fff;
+}
+
+.background-main{
+  background-color: #4056A1;
+}
+
+.background-alt{
+  background-color: #40a18b;
+}
+
 .flex{
   display: flex;
 }
@@ -37,16 +53,11 @@ h1, h2, h3, h4 {
   display: none;
 }
 
-.button--main{
-  background: #4056A1;
+.button{
   border: none;
-  color: #fff;
   padding: 5px 10px;
 }
 
-.red-text{
-  color: red;
-}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

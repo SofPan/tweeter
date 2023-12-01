@@ -2,14 +2,8 @@ header{
   height: 520px;
   width: 100%;
   padding-top: 120px;
-  justify-content: center;
-  align-items: center;
-  background-color: #40a18b;
-  background-image: url("../images/brushed-alum.png");
-}
-
-.header-content{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("../images/brushed-alum.png");
 }

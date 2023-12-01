@@ -6,7 +6,7 @@ $(document).ready(() => {
     const charactersRemaining = 140 - (charactersTyped.length + 1);
     counter.text(charactersRemaining);
     if (charactersRemaining <= 0) {
-      counter.addClass('red-text');
+      counter.addClass('text-alert');
     }
   });
 });

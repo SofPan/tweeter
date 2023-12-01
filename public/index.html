@@ -35,32 +35,30 @@
 
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav class="flex">
+  <nav class="flex text-light background-main">
     <span class="logo font-alt">tweeter</span>
-    <span class="nav-text"><strong>Write</strong> a new tweet <i class="icon fa-solid fa-angles-down"></i></span>
+    <span class="nav-text"><strong>Write</strong> a new tweet <i
+        class="icon fa-solid fa-angles-down text-alert"></i></span>
   </nav>
 
   <!-- Header -->
-  <header class="flex">
-    <div class="header-content flex">
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <!-- <br> -->
-      <div>
-        <h2>Your Name</h2>
-      </div>
+  <header class="flex background-alt">
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <div>
+      <h2>Your Name</h2>
     </div>
   </header>
+
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <!-- <h2>Compose Tweet</h2> -->
       <form action="/tweets" method="POST">
         <label for="tweet-text"><span class="sr-only">What are you humming about?</span></label>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="form-footer flex">
-          <button class="button--main font-alt" type="submit">Tweet</button>
+          <button class="button background-main font-alt text-light" type="submit">Tweet</button>
           <output name="counter" class="counter font-alt" for="tweet-text">140</output>
         </div>
       </form>
