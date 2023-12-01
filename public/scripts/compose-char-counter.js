@@ -2,6 +2,7 @@
 $(document).ready(() => {
   $("#tweet-text").keypress(function (e) {
     const charactersTyped = $(this).val();
-    console.log(charactersTyped.length);
+    const counter = $(this).parent().find('.counter');
+    counter.text(`${140 - (charactersTyped.length + 1)}`);
   });
 });
