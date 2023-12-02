@@ -2,6 +2,10 @@ article.tweet header{
   justify-content: space-between;
 }
 
+article.tweet footer{
+  border-top: 4px solid #545149;
+}
+
 .tweet--user_handle{
   color: silver;
 }
