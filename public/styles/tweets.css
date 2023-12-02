@@ -1,0 +1,7 @@
+article.tweet header{
+  justify-content: space-between;
+}
+
+.tweet--user_handle{
+  color: silver;
+}
