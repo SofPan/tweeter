@@ -1,11 +1,46 @@
-article.tweet header{
+.tweet{
+  border: 4px solid #545149;
+  padding: 15px;
+  margin: 50px 0;
+}
+
+.tweet:hover{
+  box-shadow: 5px 5px 0 0 lightblue;
+}
+
+.tweet header,
+.tweet footer{
   justify-content: space-between;
 }
 
-article.tweet footer{
+.tweet header span {
+  margin: 0 5px;
+}
+
+.tweet p {
+  margin: 30px 10px;
+}
+
+.tweet footer{
   border-top: 4px solid #545149;
+  padding: 10px;
+}
+
+.tweet footer span,
+.tweet footer i{
+  font-size: 1rem;
+}
+
+.tweet footer i {
+  margin: 0 5px;
+}
+
+.tweet footer i:hover {
+  color: #40a18b;
+  cursor: pointer;
 }
 
 .tweet--user_handle{
-  color: silver;
+  font-weight: 600;
+  color: lightblue;
 }
