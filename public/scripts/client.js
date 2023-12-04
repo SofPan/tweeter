@@ -59,9 +59,16 @@ $(document).ready(() => {
 
   $("form").on("submit", function (event) {
     event.preventDefault();
-    const serialized = $(this).serialize();
-    $.ajax(serialized, { method: "POST" })
-      .then(console.log("something happened?"));
+    const tweetText = $(this).find('textarea').val();
+    if (tweetText.trim().length <= 0) {
+      alert("Your tweet is empty!");
+    } else if (tweetText.length > 140) {
+      alert("Your tweet is too long!");
+    } else {
+      const serialized = $(this).serialize();
+      $.ajax(serialized, { method: "POST" })
+        .then(console.log("something happened?"));
+    }
   });
 
 
