@@ -1,6 +1,9 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+/* eslint-disable no-undef */
+$(document).ready(() => {
+  const createTweetElement = () => {
+    return `<article>Hello world!</article>`;
+  };
+  const $tweet = createTweetElement();
+  $('#tweets-container').append($tweet);
+});
 
