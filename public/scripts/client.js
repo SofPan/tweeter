@@ -66,5 +66,9 @@ $(document).ready(() => {
   };
 
   renderTweets(data);
+
+  $("form").on("submit", (event) => {
+    event.preventDefault();
+  });
 });
 
