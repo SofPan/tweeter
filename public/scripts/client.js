@@ -16,12 +16,13 @@ $(document).ready(() => {
       $('#tweets-container').append($createdTweet);
     }
   };
+  const dateExample = timeago.format('2016-06-12', 'en_US');
+  console.log(dateExample);
 
   const createTweetElement = (tweet) => {
     const user = tweet.user;
     const content = tweet.content;
-    // Get day month & year from date string
-    const date = new Date(tweet.created_at).toDateString().split(" ").slice(1).join(" ");
+    const date = format(tweet.created_at, 'en_US');
 
     return `<article class="tweet shadow">
         <header class="flex">
