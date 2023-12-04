@@ -57,10 +57,20 @@ h1, h2, h3, h4 {
   display: none;
 }
 
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
 .button{
-  border: none;
+  border: 1px solid transparent;
   padding: 5px 10px;
 }
+
+.shadow:hover{
+  box-shadow: 5px 5px 0 0 lightblue;
+}
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

@@ -45,7 +45,7 @@ $(document).ready(() => {
     // Get day month & year from date string
     const date = new Date(tweet.created_at).toDateString().split(" ").slice(1).join(" ");
 
-    return `<article class="tweet">
+    return `<article class="tweet shadow">
         <header class="flex">
           <div>
             <span class="tweet--user_image"><img src="${user.avatars}" alt="avatar for ${user.handle}" /> </span>
