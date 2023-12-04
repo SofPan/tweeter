@@ -1,32 +1,4 @@
 /* eslint-disable no-undef */
-
-// Dummy data
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 $(document).ready(() => {
 
   /* ----- Create and Render Tweets ----- */
@@ -71,16 +43,28 @@ $(document).ready(() => {
       </article>`;
   };
 
-  renderTweets(data);
+  // renderTweets(data);
 
 
   /* ----- Form submission POST and GET AJAX requests */
+  /**
+   * @function loadTweets takes an array of tweets and makes a GET request to render them on the page
+   */
+  const loadTweets = (tweets) => {
+    $.ajax(tweets, { method: "GET" })
+      .then(renderTweets(tweets))
+      .then(console.log("after tweets are rendered"));
+  };
 
-  $("form").on("submit", function(event) {
+  // loadTweets(data);
+
+  $("form").on("submit", function (event) {
     event.preventDefault();
     const serialized = $(this).serialize();
     $.ajax(serialized, { method: "POST" })
       .then(console.log("something happened?"));
   });
+
+
 });
 
