@@ -29,6 +29,12 @@ const data = [
 
 $(document).ready(() => {
 
+  /* ----- Create and Render Tweets ----- */
+
+  /**
+   * @function createTweetElement takes in a single tweet object and returns dynamically formatted HTML
+   * @function renderTweets appends the formatted HTML to the tweet container found in index.html
+   */
   const renderTweets = (tweets) => {
     // loops through tweets
     for (const tweet of tweets) {
@@ -67,8 +73,14 @@ $(document).ready(() => {
 
   renderTweets(data);
 
-  $("form").on("submit", (event) => {
+
+  /* ----- Form submission POST and GET AJAX requests */
+
+  $("form").on("submit", function(event) {
     event.preventDefault();
+    const serialized = $(this).serialize();
+    $.ajax(serialized, { method: "POST" })
+      .then(console.log("something happened?"));
   });
 });
 
