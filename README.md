@@ -16,3 +16,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+
+## TODO
+
+- How to handle when a user pastes in text and the remaining characters do not update?

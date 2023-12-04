@@ -42,9 +42,6 @@ $(document).ready(() => {
       </article>`;
   };
 
-  // renderTweets(data);
-
-
   /* ----- Form submission POST and GET AJAX requests */
   /**
    * @function loadTweets takes an array of tweets and makes a GET request to render them on the page
