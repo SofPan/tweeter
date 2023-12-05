@@ -46,13 +46,15 @@ $(document).ready(() => {
   /**
    * @function loadTweets takes an array of tweets and makes a GET request to render them on the page
    */
-  const loadTweets = (tweets) => {
-    $.ajax(tweets, { method: "GET" })
-      .then(renderTweets(tweets))
-      .then(console.log("after tweets are rendered"));
+  const loadTweets = () => {
+    $.ajax("/tweets", { method: "GET" })
+      .then((data) => {
+        // console.log(data);
+        renderTweets(data);
+      });
   };
 
-  // loadTweets(data);
+  loadTweets();
 
   $("form").on("submit", function (event) {
     event.preventDefault();
@@ -63,8 +65,11 @@ $(document).ready(() => {
       alert("Your tweet is too long!");
     } else {
       const serialized = $(this).serialize();
-      $.ajax(serialized, { method: "POST" })
-        .then(console.log("something happened?"));
+      $.ajax("/tweets", {
+        data: serialized,
+        method: "POST",
+      })
+        .then(loadTweets());
     }
   });
 
