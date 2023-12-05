@@ -22,7 +22,7 @@ $(document).ready(() => {
     const content = tweet.content;
     const date = timeago.format(tweet.created_at, 'en_US');
 
-    return `<article class="tweet shadow">
+    return `<article id="${tweet.postID}" class="tweet shadow">
         <header class="flex">
           <div>
             <span class="tweet--user_image"><img src="${user.avatars}" alt="avatar for ${user.handle}" /> </span>
@@ -46,12 +46,20 @@ $(document).ready(() => {
   /**
    * @function loadTweets takes an array of tweets and makes a GET request to render them on the page
    */
+  const tweetIDs = [];
   const loadTweets = () => {
     $.ajax("/tweets", { method: "GET" })
-      .then((data) => {
-        // console.log(data);
-        renderTweets(data);
-      });
+      // filter for IDs that already appear on the page
+      .then(data => {
+        return data.filter((d) => {
+          if (!tweetIDs.includes(d.postID)) {
+            tweetIDs.push(d.postID);
+            return d;
+          }
+        });
+      })
+      .then(tweets => renderTweets(tweets));
+
   };
 
   loadTweets();
