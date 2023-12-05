@@ -10,6 +10,7 @@ $(document).ready(() => {
   const renderTweets = (tweets) => {
     // loops through tweets
     for (const tweet of tweets) {
+      console.log("we're looping");
       // calls createTweetElement for each tweet
       const $createdTweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
@@ -58,7 +59,12 @@ $(document).ready(() => {
           }
         });
       })
-      .then(tweets => renderTweets(tweets));
+      .then(tweets => {
+        if (tweets.length === 0) {
+          console.log("no tweets?", tweets);
+        }
+        renderTweets(tweets);
+      });
 
   };
 
@@ -77,7 +83,17 @@ $(document).ready(() => {
         data: serialized,
         method: "POST",
       })
-        .then(loadTweets());
+        .then(() => {
+          console.log("loadTweets fires");
+          loadTweets();
+        })
+        .then(() => {
+          console.log('about to clear form');
+          // clear textarea on successful submission
+          $(this).find('textarea').val("");
+          // reset counter to 140
+          $(this).find('.counter').text("140");
+        });
     }
   });
 
