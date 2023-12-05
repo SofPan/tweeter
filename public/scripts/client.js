@@ -1,6 +1,10 @@
 /* eslint-disable no-undef */
 $(document).ready(() => {
-
+  const escape = (str) => {
+    let span = document.createElement("span");
+    span.appendChild(document.createTextNode(str));
+    return span.innerHTML;
+  };
   /* ----- Create and Render Tweets ----- */
 
   /**
@@ -31,7 +35,7 @@ $(document).ready(() => {
           </div>
           <span class="tweet--user_handle">${user.handle}</span>
         </header>
-        <p>${content.text}</p>
+        <p>${escape(content.text)}</p>
         <footer class="flex">
           <span class="tweet--posted">${date}</span>
           <div class="tweet--icons">

@@ -21,4 +21,3 @@ This repository is the starter code for the project: Students will fork and clon
 ## TODO
 
 - How to handle when a user pastes in text and the remaining characters do not update?
-- Sometimes a post does not appear until another post is made after
