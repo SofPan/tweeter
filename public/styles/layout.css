@@ -98,7 +98,22 @@ a:hover {
 }
 
 .container{
-  max-width: 90%;
+  max-width: 90vw;
   margin: 0 auto;
   background-color: inherit;
+}
+
+/* ----- RESPONSIVE STYLES ----- */
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+
+  .header, .container{
+    margin: 0 auto;
+    margin-top: 170px;
+    width: 50vw;
+    padding: 0 1rem;
+  }
 }

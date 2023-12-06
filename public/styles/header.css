@@ -7,3 +7,12 @@
   align-items: center;
   background-image: url("../images/brushed-alum.png");
 }
+
+@media only screen and (min-width: 1024px){
+  .hero{
+    height: auto;
+    width: 85%;
+    padding: 25px;
+    margin: 0 auto;
+  }
+}
