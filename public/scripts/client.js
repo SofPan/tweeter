@@ -10,6 +10,7 @@ $(document).ready(() => {
   // Only show new tweet form on icon click
   $('nav .show-form').on("click", () => {
     $('.new-tweet').slideDown();
+    $('.new-tweet').find('textarea').focus();
     // scroll to the top of the main element with 120px offset
     $('html, body').scrollTop($("main").offset().top - 120);
   });
