@@ -1,10 +1,11 @@
 /* eslint-disable no-undef */
+const escape = (str) => {
+  let span = document.createElement("span");
+  span.appendChild(document.createTextNode(str));
+  return span.innerHTML;
+};
+
 $(document).ready(() => {
-  const escape = (str) => {
-    let span = document.createElement("span");
-    span.appendChild(document.createTextNode(str));
-    return span.innerHTML;
-  };
   /* ----- Create and Render Tweets ----- */
 
   /**
@@ -14,7 +15,6 @@ $(document).ready(() => {
   const renderTweets = (tweets) => {
     // loops through tweets
     for (const tweet of tweets) {
-      console.log("we're looping");
       // calls createTweetElement for each tweet
       const $createdTweet = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
@@ -64,23 +64,24 @@ $(document).ready(() => {
         });
       })
       .then(tweets => {
-        if (tweets.length === 0) {
-          console.log("no tweets?", tweets);
-        }
         renderTweets(tweets);
       });
 
   };
 
   loadTweets();
+  $("#error").hide();
 
   $("form").on("submit", function (event) {
     event.preventDefault();
+    $("#error").slideUp();
     const tweetText = $(this).find('textarea').val();
     if (tweetText.trim().length <= 0) {
-      alert("Your tweet is empty!");
+      $("#error").find('p').text("Tweets must not be empty.");
+      $("#error").slideDown();
     } else if (tweetText.length > 140) {
-      alert("Your tweet is too long!");
+      $("#error").find('p').text("Tweets must be a maximum 140 characters.");
+      $("#error").slideDown();
     } else {
       const serialized = $(this).serialize();
       $.ajax("/tweets", {
@@ -88,11 +89,9 @@ $(document).ready(() => {
         method: "POST",
       })
         .then(() => {
-          console.log("loadTweets fires");
           loadTweets();
         })
         .then(() => {
-          console.log('about to clear form');
           // clear textarea on successful submission
           $(this).find('textarea').val("");
           // reset counter to 140
@@ -100,7 +99,5 @@ $(document).ready(() => {
         });
     }
   });
-
-
 });
 
