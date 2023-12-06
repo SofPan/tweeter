@@ -1,0 +1,85 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.tweet{
+  border-color: $color-dark;
+  padding: 15px;
+  margin: 50px 0;
+
+  &-new{
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px 0;
+
+    .form-footer{
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @include min-width($desktop){
+      padding-top: 0;
+    }
+  }
+
+  &-text{
+    resize: none;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: unset;
+    border-bottom: 4px solid $color-dark;
+    font-weight: 600;
+
+    &::placeholder{
+      color: $color-dark;
+    }
+  }
+
+
+  p{
+    margin: 30px 10px;
+  }
+
+  header,
+  footer{
+    @include flex-position($between);
+  }
+
+  header{
+    > div{
+      display: flex;
+      align-items: center;
+    }
+
+    span{
+      margin: 0 5px;
+    }
+  }
+
+  footer{
+    border-top: 4px solid $color-dark;
+    padding: 10px;
+
+    span, i{
+      font-size: 1rem;
+    }
+
+    i{
+      margin: 0 5px;
+
+      &:hover{
+        color: $color-alt;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &--user_handle{
+    font-weight: 600;
+    color: $color-highlight;
+  }
+
+  @include min-width($desktop){
+    margin-top: 0;
+  }
+}

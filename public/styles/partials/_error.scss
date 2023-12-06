@@ -1,0 +1,15 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+#error{
+  @include flex-position($center, $center);
+  gap: 15px;
+  border-color: $color-alert;
+  color: $color-alert;
+  padding: 10px;
+  margin-bottom: 30px;
+
+  p{
+    margin: 0;
+  }
+}

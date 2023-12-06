@@ -1,0 +1,46 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+nav{
+  position: fixed;
+  height: 120px;
+  width: 100vw;
+  background-color: $color-main;
+  padding: 0 1.5em;
+  @include flex-position($between, $center);
+
+  .nav-text{
+    .icon{
+      display: block;
+      text-align: center;
+      animation: bounce 1.5s linear 1s infinite;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  @keyframes bounce {
+    0%   { 
+      transform: translateY(0); 
+    }
+    50%  { 
+      transform: translateY(8px); 
+    }
+    100% { 
+      transform: translateY(0); 
+    }
+  }
+
+  @include max-width($mobile){
+    height: unset;
+    flex-direction: column;
+    padding: 20px;
+
+    .logo{
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+  }
+}

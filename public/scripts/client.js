@@ -35,7 +35,7 @@ $(document).ready(() => {
     const content = tweet.content;
     const date = timeago.format(tweet.created_at, 'en_US');
 
-    return `<article id="${tweet.postID}" class="tweet shadow">
+    return `<article id="${tweet.postID}" class="tweet shadow border">
         <header class="flex">
           <div>
             <span class="tweet--user_image"><img src="${user.avatars}" alt="avatar for ${user.handle}" /> </span>

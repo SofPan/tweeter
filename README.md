@@ -22,4 +22,3 @@ This repository is the starter code for the project: Students will fork and clon
 
 - How to handle when a user pastes in text and the remaining characters do not update?
   - Text remains red and does not count up when erasing text to bring it back below 140 characters
-- Animate the chevrons to create tweet

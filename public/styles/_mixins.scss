@@ -1,0 +1,16 @@
+@mixin min-width($size){
+  @media only screen and (min-width: $size){
+    @content
+  }
+};
+
+@mixin max-width($size){
+  @media only screen and (max-width: $size){
+    @content
+  }
+};
+
+@mixin flex-position($justify: flex-start, $align: flex-start){
+  justify-content: $justify;
+  align-items: $align;
+}

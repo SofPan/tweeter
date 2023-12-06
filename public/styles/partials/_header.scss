@@ -1,0 +1,18 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.hero{
+  height: 520px;
+  width: 100%;
+  padding-top: 120px;
+  flex-direction: column;
+  @include flex-position($center, $center);
+  background-image: url("../../images/brushed-alum.png");
+
+  @include min-width($desktop){
+    height: auto;
+    width: 85%;
+    padding: 25px;
+    margin: 0 auto;
+  }
+}
