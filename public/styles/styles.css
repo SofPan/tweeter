@@ -12,6 +12,71 @@ body {
   font-size: 24px;
   font-family: "source sans 3", sans-serif;
 }
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.background-main {
+  background-color: #4056A1;
+}
+.background-alt {
+  background-color: #40a18b;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+.button {
+  padding: 5px 10px;
+}
+.button-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+}
+.button-top:hover {
+  background-color: lightblue;
+  color: #545149;
+}
+
+.shadow:hover {
+  box-shadow: 5px 5px 0 0 lightblue;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+  background-color: inherit;
+}
+
+@media only screen and (min-width: 1024px) {
+  .header,
+  .container {
+    margin: 0 auto;
+    margin-top: 170px;
+    width: 50vw;
+    padding: 0 1rem;
+  }
+}
+
+.sr-only {
+  visibility: hidden;
+}
 
 h2 {
   margin: 0;
