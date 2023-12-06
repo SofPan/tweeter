@@ -59,7 +59,7 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
+    <section class="tweet-new">
       <div id="error" class="flex">
         <i class="fa-solid fa-triangle-exclamation"></i>
         <p></p>
@@ -67,7 +67,7 @@
       </div>
       <form action="/tweets" method="POST">
         <label for="tweet-text"><span class="sr-only">What are you humming about?</span></label>
-        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <textarea class="tweet-text" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="form-footer flex">
           <button class="button background-main font-alt text-light shadow" type="submit">Tweet</button>
           <output name="counter" class="counter font-alt" for="tweet-text">140</output>
