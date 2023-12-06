@@ -6,6 +6,13 @@ const escape = (str) => {
 };
 
 $(document).ready(() => {
+  $('.new-tweet').hide();
+  // Only show new tweet form on icon click
+  $('nav .show-form').on("click", () => {
+    $('.new-tweet').slideDown();
+    // scroll to the top of the main element with 120px offset
+    $('html, body').scrollTop($("main").offset().top - 120);
+  });
   /* ----- Create and Render Tweets ----- */
 
   /**
@@ -96,6 +103,8 @@ $(document).ready(() => {
           $(this).find('textarea').val("");
           // reset counter to 140
           $(this).find('.counter').text("140");
+          // hide the form
+          $(".new-tweet").slideUp();
         });
     }
   });
