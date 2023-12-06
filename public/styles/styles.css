@@ -229,4 +229,17 @@ nav .nav-text .icon:hover {
   .tweet {
     margin-top: 0;
   }
+}
+
+#error {
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border: 4px solid red;
+  color: red;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+#error p {
+  margin: 0;
 }/*# sourceMappingURL=styles.css.map */
