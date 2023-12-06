@@ -4,7 +4,7 @@
 #error{
   @include flex-position($center, $center);
   gap: 15px;
-  border: 4px solid $color-alert;
+  border-color: $color-alert;
   color: $color-alert;
   padding: 10px;
   margin-bottom: 30px;

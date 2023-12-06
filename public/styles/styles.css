@@ -75,6 +75,11 @@ button:hover {
   }
 }
 
+.border {
+  border-width: 4px;
+  border-style: solid;
+}
+
 .sr-only {
   visibility: hidden;
 }
@@ -161,7 +166,7 @@ nav .nav-text .icon:hover {
 }
 
 .tweet {
-  border: 4px solid #545149;
+  border-color: #545149;
   padding: 15px;
   margin: 50px 0;
 }
@@ -185,7 +190,7 @@ nav .nav-text .icon:hover {
   height: 50px;
   background: transparent;
   border: unset;
-  border-bottom: 3px solid #545149;
+  border-bottom: 4px solid #545149;
   font-weight: 600;
 }
 .tweet-text::-moz-placeholder {
@@ -237,7 +242,7 @@ nav .nav-text .icon:hover {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  border: 4px solid red;
+  border-color: red;
   color: red;
   padding: 10px;
   margin-bottom: 30px;
