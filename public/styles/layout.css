@@ -67,14 +67,27 @@ a:hover {
   padding: 5px 10px;
 }
 
+.button-top{
+  position: fixed;
+  bottom: 25px; 
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+}
+
+.button-top:hover{
+  background-color: lightblue;
+  color: #545149;
+}
+
 .shadow:hover{
   box-shadow: 5px 5px 0 0 lightblue;
 }
 
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.round{
+  border-radius: 50%;
+}
 
 .container{
   max-width: 90%;
