@@ -42,7 +42,7 @@
 
   header,
   footer{
-    justify-content: space-between;
+    @include flex-position($between);
   }
 
   header{

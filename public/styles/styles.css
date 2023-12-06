@@ -200,6 +200,7 @@ nav .nav-text .icon:hover {
 .tweet header,
 .tweet footer {
   justify-content: space-between;
+  align-items: flex-start;
 }
 .tweet header > div {
   display: flex;

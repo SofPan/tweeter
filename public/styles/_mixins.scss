@@ -9,3 +9,8 @@
     @content
   }
 };
+
+@mixin flex-position($justify: flex-start, $align: flex-start){
+  justify-content: $justify;
+  align-items: $align;
+}

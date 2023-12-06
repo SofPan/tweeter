@@ -2,8 +2,7 @@
 @use "../mixins" as *;
 
 #error{
-  justify-content: center;
-  align-items: center;
+  @include flex-position($center, $center);
   gap: 15px;
   border: 4px solid $color-alert;
   color: $color-alert;
