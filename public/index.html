@@ -43,7 +43,7 @@
   <!-- Top nav bar (fixed) -->
   <nav class="flex text-light background-main">
     <span class="logo font-alt">tweeter</span>
-    <span class="nav-text"><strong>Write</strong> a new tweet <i
+    <span class="nav-text"><span class="bold">Write</span> a new tweet <i
         class="icon show-form fa-solid fa-angles-down text-alert"></i></span>
   </nav>
 
@@ -53,7 +53,7 @@
       <img src="/images/profile-hex.png">
     </div>
     <div>
-      <h2 class="text-light"><strong>Sofia</strong> Panchaud</h2>
+      <h2 class="text-light"><span class="bold">Sofia</span> Panchaud</h2>
     </div>
   </header>
 
@@ -76,8 +76,10 @@
     </section>
     <section id="tweets-container">
     </section>
-    <button id="return-to-top" class="round background-main text-light button-top button"><i
-        class="fa-solid fa-angles-up"></i></button>
+    <button id="return-to-top" class="round background-main text-light button-top button">
+      <i class="fa-solid fa-angles-up"></i>
+      <span class="sr-only">Return to top</span>
+    </button>
   </main>
 </body>
 
