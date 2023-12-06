@@ -9,6 +9,11 @@
   justify-content: space-between;
 }
 
+.tweet header > div{
+  display: flex;
+  align-items: center;
+}
+
 .tweet header span {
   margin: 0 5px;
 }
@@ -39,4 +44,10 @@
 .tweet--user_handle{
   font-weight: 600;
   color: lightblue;
+}
+
+@media only screen and (min-width: 1024px) {
+  .tweet{
+    margin-top: 0;
+  }
 }

@@ -1,11 +1,11 @@
 /* eslint-disable no-undef */
-const escape = (str) => {
-  let span = document.createElement("span");
-  span.appendChild(document.createTextNode(str));
-  return span.innerHTML;
-};
 
 $(document).ready(() => {
+  const escape = (str) => {
+    let span = document.createElement("span");
+    span.appendChild(document.createTextNode(str));
+    return span.innerHTML;
+  };
   $('.new-tweet').hide();
   // Only show new tweet form on icon click
   $('nav .show-form').on("click", () => {
@@ -41,7 +41,9 @@ $(document).ready(() => {
             <span class="tweet--user_image"><img src="${user.avatars}" alt="avatar for ${user.handle}" /> </span>
             <span class="tweet--user_name">${user.name}</span>
           </div>
-          <span class="tweet--user_handle">${user.handle}</span>
+          <div>
+            <span class="tweet--user_handle">${user.handle}</span>
+          </div>
         </header>
         <p>${escape(content.text)}</p>
         <footer class="flex">
