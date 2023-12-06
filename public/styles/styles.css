@@ -36,6 +36,7 @@ button:hover {
 
 .button {
   padding: 5px 10px;
+  border: none;
 }
 .button-top {
   position: fixed;
