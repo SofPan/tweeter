@@ -1,3 +1,4 @@
-body {
-  background: orange;
-}
+@use "./sass/layout.scss";
+@use "./sass/typography";
+
+@import url("./sass/variables.scss");

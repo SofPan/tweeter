@@ -1,3 +1,16 @@
+/* Color Variables */
+/* Font Variables */ 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-  background: orange;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "source sans 3", sans-serif;
 }/*# sourceMappingURL=styles.css.map */

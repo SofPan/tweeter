@@ -14,14 +14,14 @@ html {
  * Global layout stuff
  */
 
-body {
+/* body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "source sans 3", sans-serif;
-}
+} */
 
-h1, h2, h3, h4 {
+/* h1, h2, h3, h4 {
   margin: 0;
 }
 
@@ -47,7 +47,7 @@ h2{
 
 .text-main{
   color: #4056A1;
-}
+} */
 
 .background-main{
   background-color: #4056A1;
