@@ -13,3 +13,60 @@ body {
   font-size: 24px;
   font-family: $font-main;
 }
+
+.flex{
+  display: flex;
+}
+
+.background{
+  &-main{
+    background-color: $color-main;
+  }
+  &-alt{
+    background-color: $color-alt;
+  }
+}
+
+a,
+button{
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.button{
+  padding: 5px 10px;
+
+  &-top{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    padding: 10px;
+
+    &:hover{
+      background-color: $color-highlight;
+      color: $color-dark;
+    }
+  }
+}
+
+.shadow:hover{
+  box-shadow: 5px 5px 0 0 $color-highlight;
+}
+
+.round{
+  border-radius: 50%;
+}
+
+.container{
+  max-width: 90vw;
+  margin: 0 auto;
+  background-color: inherit;
+}
+
+// elements meant for screen reader only
+.sr-only{
+  visibility: hidden;
+}
