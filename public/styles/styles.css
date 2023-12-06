@@ -159,6 +159,11 @@ nav .nav-text .icon:hover {
   }
 }
 
+.tweet {
+  border: 4px solid #545149;
+  padding: 15px;
+  margin: 50px 0;
+}
 .tweet-new {
   margin: 0 auto;
   width: 100%;
@@ -187,4 +192,41 @@ nav .nav-text .icon:hover {
 }
 .tweet-text::placeholder {
   color: #545149;
+}
+.tweet p {
+  margin: 30px 10px;
+}
+.tweet header,
+.tweet footer {
+  justify-content: space-between;
+}
+.tweet header > div {
+  display: flex;
+  align-items: center;
+}
+.tweet header span {
+  margin: 0 5px;
+}
+.tweet footer {
+  border-top: 4px solid #545149;
+  padding: 10px;
+}
+.tweet footer span, .tweet footer i {
+  font-size: 1rem;
+}
+.tweet footer i {
+  margin: 0 5px;
+}
+.tweet footer i:hover {
+  color: #40a18b;
+  cursor: pointer;
+}
+.tweet--user_handle {
+  font-weight: 600;
+  color: lightblue;
+}
+@media only screen and (min-width: 1024px) {
+  .tweet {
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=styles.css.map */
