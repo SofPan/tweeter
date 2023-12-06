@@ -1,5 +1,3 @@
-/* Color Variables */
-/* Font Variables */
 html {
   box-sizing: border-box;
 }
@@ -13,4 +11,27 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: "source sans 3", sans-serif;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.font-alt {
+  font-family: "Bungee", sans-serif;
+}
+
+.text-alert {
+  color: red;
+}
+.text-light {
+  color: #fff;
+}
+.text-main {
+  color: #4056A1;
 }/*# sourceMappingURL=styles.css.map */
