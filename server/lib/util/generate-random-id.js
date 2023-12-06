@@ -1,3 +1,3 @@
 module.exports = function generateRandomID() {
-  return Math.random().toString(36).slice(2, 8);
+  return Math.random().toString(36).slice(2, 6);
 };
