@@ -1,4 +1,4 @@
-@use "./sass/layout.scss";
-@use "./sass/typography";
-
-@import url("./sass/variables.scss");
+@use "variables" as *;
+@use "./partials/layout.scss";
+// @use "./sass/typography";
+// @import url("./sass/variables.scss");
