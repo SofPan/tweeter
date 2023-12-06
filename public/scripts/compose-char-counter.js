@@ -6,6 +6,8 @@ $(document).ready(() => {
     counter.text(charactersRemaining);
     if (charactersRemaining <= 0) {
       counter.addClass('text-alert');
+    } else {
+      counter.removeClass('text-alert');
     }
   });
 
