@@ -68,8 +68,10 @@ $(document).ready(() => {
 
   // if error condition is met, show error container with provided text
   const displayError = (text) => {
-    $("#error").find('p').text(text);
-    $("#error").slideDown();
+    setTimeout(() => {
+      $("#error").find('p').text(text);
+      $("#error").slideDown();
+    }, 750);
     return true;
   };
 
@@ -85,7 +87,10 @@ $(document).ready(() => {
   // on successful form submission, post new tweet to the page
   $("form").on("submit", function (event) {
     event.preventDefault();
-    const tweetText = $(this).find('textarea').val();
+    const $textArea = $(this).find('textarea');
+    const $counter = $(this).find('.counter');
+
+    const tweetText = $textArea.val();
 
     // if there are no errors, proceed to post
     if (!validateErrors(tweetText.trim().length)) {
@@ -99,9 +104,11 @@ $(document).ready(() => {
         })
         .then(() => {
           // clear textarea on successful submission
-          $(this).find('textarea').val("");
+          $textArea.val("");
           // reset counter to 140
-          $(this).find('.counter').text("140");
+          $counter.text("140");
+          // in case tweet was exactly 140 characters long, clear text-alert class
+          $counter.removeClass("text-alert");
           // hide the form
           $(".tweet-new").slideUp();
         });
