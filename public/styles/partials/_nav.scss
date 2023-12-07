@@ -10,10 +10,6 @@
   background-color: $color-main;
   padding: 1.5em;
 
-  @include max-width($mobile){
-    height: unset;
-  }
-  
     &-inner{
       height: 100%;
       width: 100%;
@@ -21,12 +17,6 @@
 
       @include max-width($mobile){
         flex-direction: column;
-        // padding: 1.5em;
-
-        .logo{
-          font-size: 2.5rem;
-          margin-bottom: 15px;
-        }
       }
     }
     &-text{
@@ -34,9 +24,13 @@
         display: block;
         text-align: center;
         animation: bounce 1.5s linear 1s infinite;
-  
+        
         &:hover{
           cursor: pointer;
+        }
+
+        @include max-width($mobile){
+          animation: unset;
         }
       }
     }
