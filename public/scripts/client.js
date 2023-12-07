@@ -1,10 +1,12 @@
 /* eslint-disable no-undef */
 $(document).ready(() => {
+  // Protect page from malicious scripting
   const escape = (str) => {
     let span = document.createElement("span");
     span.appendChild(document.createTextNode(str));
     return span.innerHTML;
   };
+
   /* ----- Create and Render Tweets ----- */
 
   /**
@@ -59,16 +61,19 @@ $(document).ready(() => {
       .then(response => renderTweets(response));
   };
 
+  // display initial tweets
   loadTweets();
 
   $("#error").hide();
 
+  // if error condition is met, show error container with provided text
   const displayError = (text) => {
     $("#error").find('p').text(text);
     $("#error").slideDown();
     return true;
   };
 
+  // check if error conditions are met
   const validateErrors = (characterCount) => {
     $("#error").slideUp();
 
@@ -77,6 +82,7 @@ $(document).ready(() => {
         : false;
   };
 
+  // on successful form submission, post new tweet to the page
   $("form").on("submit", function (event) {
     event.preventDefault();
     const tweetText = $(this).find('textarea').val();
