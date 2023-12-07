@@ -1,19 +1,10 @@
 /* eslint-disable no-undef */
-
 $(document).ready(() => {
   const escape = (str) => {
     let span = document.createElement("span");
     span.appendChild(document.createTextNode(str));
     return span.innerHTML;
   };
-  $('.new-tweet').hide();
-  // Only show new tweet form on icon click
-  $('nav .show-form').on("click", () => {
-    $('.new-tweet').slideDown();
-    $('.new-tweet').find('textarea').focus();
-    // scroll to the top of the main element with 120px offset
-    $('html, body').scrollTop($("main").offset().top - 120);
-  });
   /* ----- Create and Render Tweets ----- */
 
   /**
