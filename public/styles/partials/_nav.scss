@@ -3,17 +3,31 @@
 
 /* ----- NAV CONTAINER ----- */ 
 
-nav{
+.nav{
   position: fixed;
   height: 120px;
   width: 100vw;
   background-color: $color-main;
   padding: 1.5em;
-  .nav{
+
+  @include max-width($mobile){
+    height: unset;
+  }
+  
     &-inner{
       height: 100%;
       width: 100%;
       @include flex-position($between, $center);
+
+      @include max-width($mobile){
+        flex-direction: column;
+        // padding: 1.5em;
+
+        .logo{
+          font-size: 2.5rem;
+          margin-bottom: 15px;
+        }
+      }
     }
     &-text{
       .icon{
@@ -26,9 +40,7 @@ nav{
         }
       }
     }
-  }
-
-
+  
   @keyframes bounce {
     0%   { 
       transform: translateY(0); 
@@ -38,17 +50,6 @@ nav{
     }
     100% { 
       transform: translateY(0); 
-    }
-  }
-
-  @include max-width($mobile){
-    height: unset;
-    flex-direction: column;
-    padding: 20px;
-
-    .logo{
-      font-size: 2.5rem;
-      margin-bottom: 15px;
     }
   }
 }
