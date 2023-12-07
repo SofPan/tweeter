@@ -1,6 +1,5 @@
 [
   {
-    "postID": "001",
     "user": {
       "name": "Newton",
       "avatars": "https://i.imgur.com/73hZDYK.png",
@@ -9,10 +8,9 @@
     "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-    "created_at": 1701730269237
+    "created_at": 1701792068805
   },
   {
-    "postID": "002",
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
@@ -21,6 +19,6 @@
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1701816669237
+    "created_at": 1701878468805
   }
 ]

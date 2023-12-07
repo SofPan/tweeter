@@ -21,6 +21,8 @@ $(document).ready(() => {
    * @function renderTweets appends the formatted HTML to the tweet container found in index.html
    */
   const renderTweets = (tweets) => {
+    // empty tweets container before re-render to prevent duplicates
+    $('#tweets-container').empty();
     // loops through tweets
     for (const tweet of tweets) {
       // calls createTweetElement for each tweet
@@ -35,7 +37,7 @@ $(document).ready(() => {
     const content = tweet.content;
     const date = timeago.format(tweet.created_at, 'en_US');
 
-    return `<article id="${tweet.postID}" class="tweet shadow border">
+    return `<article class="tweet shadow border">
         <header class="flex">
           <div>
             <span class="tweet--user_image"><img src="${user.avatars}" alt="avatar for ${user.handle}" /> </span>
@@ -61,22 +63,9 @@ $(document).ready(() => {
   /**
    * @function loadTweets takes an array of tweets and makes a GET request to render them on the page
    */
-  const tweetIDs = [];
   const loadTweets = () => {
     $.ajax("/tweets", { method: "GET" })
-      // filter for IDs that already appear on the page
-      .then(data => {
-        return data.filter((d) => {
-          if (!tweetIDs.includes(d.postID)) {
-            tweetIDs.push(d.postID);
-            return d;
-          }
-        });
-      })
-      .then(tweets => {
-        renderTweets(tweets);
-      });
-
+      .then(response => renderTweets(response));
   };
 
   loadTweets();
