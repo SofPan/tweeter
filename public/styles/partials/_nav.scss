@@ -8,20 +8,26 @@ nav{
   height: 120px;
   width: 100vw;
   background-color: $color-main;
-  padding: 0 1.5em;
-  @include flex-position($between, $center);
-
-  .nav-text{
-    .icon{
-      display: block;
-      text-align: center;
-      animation: bounce 1.5s linear 1s infinite;
-
-      &:hover{
-        cursor: pointer;
+  padding: 0.5em 1.5em;
+  .nav{
+    &-inner{
+      height: 100%;
+      width: 100%;
+      @include flex-position($between, $center);
+    }
+    &-text{
+      .icon{
+        display: block;
+        text-align: center;
+        animation: bounce 1.5s linear 1s infinite;
+  
+        &:hover{
+          cursor: pointer;
+        }
       }
     }
   }
+
 
   @keyframes bounce {
     0%   { 
