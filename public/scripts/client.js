@@ -39,7 +39,9 @@ $(document).ready(() => {
             <span class="tweet--user_handle">${user.handle}</span>
           </div>
         </header>
-        <p>${escape(content.text)}</p>
+        <body>
+          <p>${escape(content.text)}</p>
+        </body>
         <footer class="flex">
           <span class="tweet--posted">${date}</span>
           <div class="tweet--icons">
