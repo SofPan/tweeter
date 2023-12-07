@@ -52,7 +52,7 @@ $(document).ready(() => {
 
   /* ----- Form submission POST and GET AJAX requests */
   /**
-   * @function loadTweets takes an array of tweets and makes a GET request to render them on the page
+   * @function loadTweets makes a GET request and sends JSON response to renderTweets
    */
   const loadTweets = () => {
     $.ajax("/tweets", { method: "GET" })
@@ -60,19 +60,29 @@ $(document).ready(() => {
   };
 
   loadTweets();
+
   $("#error").hide();
+
+  const displayError = (text) => {
+    $("#error").find('p').text(text);
+    $("#error").slideDown();
+    return true;
+  };
+
+  const validateErrors = (characterCount) => {
+    $("#error").slideUp();
+
+    return characterCount <= 0 ? displayError("Tweets must not be empty.")
+      : characterCount > 140 ? displayError("Tweets must be a maximum 140 characters.")
+        : false;
+  };
 
   $("form").on("submit", function (event) {
     event.preventDefault();
-    $("#error").slideUp();
     const tweetText = $(this).find('textarea').val();
-    if (tweetText.trim().length <= 0) {
-      $("#error").find('p').text("Tweets must not be empty.");
-      $("#error").slideDown();
-    } else if (tweetText.length > 140) {
-      $("#error").find('p').text("Tweets must be a maximum 140 characters.");
-      $("#error").slideDown();
-    } else {
+
+    // if there are no errors, proceed to post
+    if (!validateErrors(tweetText.trim().length)) {
       const serialized = $(this).serialize();
       $.ajax("/tweets", {
         data: serialized,
@@ -87,7 +97,7 @@ $(document).ready(() => {
           // reset counter to 140
           $(this).find('.counter').text("140");
           // hide the form
-          $(".new-tweet").slideUp();
+          $(".tweet-new").slideUp();
         });
     }
   });
