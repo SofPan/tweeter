@@ -59,7 +59,8 @@ $(document).ready(() => {
    */
   const loadTweets = () => {
     $.ajax("/tweets", { method: "GET" })
-      .then(response => renderTweets(response));
+      .then(response => renderTweets(response))
+      .catch(error => console.log("loadTweets function error:", error));
   };
 
   // display initial tweets
@@ -112,7 +113,8 @@ $(document).ready(() => {
           $counter.removeClass("text-alert");
           // hide the form
           $(".tweet-new").slideUp();
-        });
+        })
+        .catch(error => console.log("Form submit error:", error));
     }
   });
 });
