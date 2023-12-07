@@ -110,45 +110,66 @@ h2 {
 }
 
 /* ----- HEADER CONTAINER ----- */
-.hero {
-  height: 520px;
-  width: 100%;
+.header {
+  height: 400px;
   padding-top: 120px;
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    padding-top: unset;
+  }
+}
+.header .hero {
+  height: 100%;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1.5em;
   background-image: url("../../images/brushed-alum.png");
 }
-@media only screen and (min-width: 1024px) {
-  .hero {
-    height: auto;
-    width: 85%;
-    padding: 25px;
-    margin: 0 auto;
-  }
+.header .hero > div {
+  text-align: center;
+  vertical-align: middle;
+}
+.header .hero img {
+  width: 90%;
+  height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* ----- NAV CONTAINER ----- */
-nav {
+.nav {
   position: fixed;
   height: 120px;
   width: 100vw;
   background-color: #4056A1;
   padding: 1.5em;
 }
-nav .nav-inner {
+.nav-inner {
   height: 100%;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
-nav .nav-text .icon {
+@media only screen and (max-width: 480px) {
+  .nav-inner {
+    flex-direction: column;
+  }
+}
+.nav-text .icon {
   display: block;
   text-align: center;
   animation: bounce 1.5s linear 1s infinite;
 }
-nav .nav-text .icon:hover {
+.nav-text .icon:hover {
   cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  .nav-text .icon {
+    animation: unset;
+  }
 }
 @keyframes bounce {
   0% {
@@ -159,17 +180,6 @@ nav .nav-text .icon:hover {
   }
   100% {
     transform: translateY(0);
-  }
-}
-@media only screen and (max-width: 480px) {
-  nav {
-    height: unset;
-    flex-direction: column;
-    padding: 20px;
-  }
-  nav .logo {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
   }
 }
 

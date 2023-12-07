@@ -2,18 +2,30 @@
 @use "../mixins" as *;
 
 /* ----- HEADER CONTAINER ----- */ 
-.hero{
-  height: 520px;
-  width: 100%;
+.header{
+  height: 400px;
   padding-top: 120px;
-  flex-direction: column;
-  @include flex-position($center, $center);
-  background-image: url("../../images/brushed-alum.png");
-
   @include min-width($desktop){
-    height: auto;
-    width: 85%;
-    padding: 25px;
-    margin: 0 auto;
+    padding-top: unset;
+  }
+
+  .hero{
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    @include flex-position($center, $center);
+    padding: 1.5em;
+    background-image: url("../../images/brushed-alum.png");
+  
+    > div{
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    img{
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+    }
   }
 }
