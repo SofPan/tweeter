@@ -1,3 +1,4 @@
+// RESPONSIVE LAYOUTS
 @mixin min-width($size){
   @media only screen and (min-width: $size){
     @content
@@ -10,6 +11,7 @@
   }
 };
 
+// FLEX POSITIONING
 @mixin flex-position($justify: flex-start, $align: flex-start){
   justify-content: $justify;
   align-items: $align;

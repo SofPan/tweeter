@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 $(document).ready(() => {
   $('.tweet-new').hide();
   $('#return-to-top').hide();

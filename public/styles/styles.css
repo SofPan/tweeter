@@ -1,3 +1,4 @@
+/* ----- LAYOUT AND GLOBAL DESIGN ELEMENTS ----- */
 html {
   box-sizing: border-box;
 }
@@ -84,6 +85,7 @@ button:hover {
   visibility: hidden;
 }
 
+/* ----- TYPOGRAPHY ----- */
 h2 {
   margin: 0;
   font-weight: 300;
@@ -107,6 +109,26 @@ h2 {
   color: #4056A1;
 }
 
+/* ----- HEADER CONTAINER ----- */
+.hero {
+  height: 520px;
+  width: 100%;
+  padding-top: 120px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../images/brushed-alum.png");
+}
+@media only screen and (min-width: 1024px) {
+  .hero {
+    height: auto;
+    width: 85%;
+    padding: 25px;
+    margin: 0 auto;
+  }
+}
+
+/* ----- NAV CONTAINER ----- */
 nav {
   position: fixed;
   height: 120px;
@@ -147,24 +169,7 @@ nav .nav-text .icon:hover {
   }
 }
 
-.hero {
-  height: 520px;
-  width: 100%;
-  padding-top: 120px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../../images/brushed-alum.png");
-}
-@media only screen and (min-width: 1024px) {
-  .hero {
-    height: auto;
-    width: 85%;
-    padding: 25px;
-    margin: 0 auto;
-  }
-}
-
+/* ----- TWEETS AND FORM CONTAINERS ----- */
 .tweet {
   border-color: #545149;
   padding: 15px;
@@ -238,6 +243,7 @@ nav .nav-text .icon:hover {
   }
 }
 
+/* ----- ERROR CONTAINER ----- */
 #error {
   justify-content: center;
   align-items: center;

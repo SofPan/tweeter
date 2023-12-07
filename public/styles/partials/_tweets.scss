@@ -1,6 +1,8 @@
 @use "../variables" as *;
 @use "../mixins" as *;
 
+/* ----- TWEETS AND FORM CONTAINERS ----- */ 
+
 .tweet{
   border-color: $color-dark;
   padding: 15px;

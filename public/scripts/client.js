@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 $(document).ready(() => {
   // Protect page from malicious scripting
   const escape = (str) => {
